@@ -5,12 +5,7 @@
 </template>
 
 <style scoped>
-    h2 {
-        text-align: center;
-    }
-    .container {
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(171, 48, 182);
-    }
+.container {
+  background-color: rgb(171, 48, 182);
+}
 </style>

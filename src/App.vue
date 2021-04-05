@@ -36,3 +36,14 @@ export default {
   }),
 };
 </script>
+<style>
+h2 {
+  color: aliceblue;
+  font-size: 6rem;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+</style>

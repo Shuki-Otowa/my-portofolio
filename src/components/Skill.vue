@@ -1,16 +1,19 @@
 <template>
   <div class="container">
-    <h2>Skill</h2>
+    <div class="section-title">
+      <h2>Skill</h2>
+    </div>
   </div>
 </template>
 
 <style scoped>
-    h2 {
-        text-align: center;
-    }
-    .container {
-        width: 100vw;
-        height: 100vh;
-        background-color: #999;
-    }
+.container {
+  background-color: #999;
+}
+
+.section-title {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
 </style>
