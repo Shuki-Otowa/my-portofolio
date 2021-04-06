@@ -1,6 +1,6 @@
 <template>
   <div class="bottom-nav-container">
-    <v-bottom-navigation  light grow shift height="70px">
+    <v-bottom-navigation grow background-color="#f5f5f5" height="70px">
       
       <v-btn v-for="menu in menus" :key="menu.title" :to="menu.path">
         <span>{{ menu.title }}</span>
