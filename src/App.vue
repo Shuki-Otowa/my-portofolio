@@ -31,6 +31,7 @@ export default {
 h2 {
   color: aliceblue;
   font-size: 6rem;
+  margin-left: 20px;
 }
 .container {
   width: 100vw;
