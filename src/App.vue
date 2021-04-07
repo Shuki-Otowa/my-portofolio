@@ -28,6 +28,14 @@ export default {
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Skia-Regular_Black", "ヒラギノ角ゴシック", "Hiragino Sans",
+    "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "Osaka", YuGothic,
+    "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
+}
+
 h2 {
   color: aliceblue;
   font-size: 6rem;
