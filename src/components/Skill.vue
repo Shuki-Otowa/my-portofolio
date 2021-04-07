@@ -51,7 +51,7 @@
 .skill-container {
   width: 80vw;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 0 auto;
 }
 .skill-icon {

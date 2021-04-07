@@ -32,6 +32,7 @@ h2 {
   color: aliceblue;
   font-size: 6rem;
   margin-left: 20px;
+  margin-bottom: 30px;
 }
 .container {
   width: 100vw;
