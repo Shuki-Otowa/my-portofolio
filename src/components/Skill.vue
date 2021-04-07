@@ -2,6 +2,8 @@
   <div class="container">
     <h2>Skill</h2>
     <div class="skill-container">
+      <h3 class="skill-cards-title">language</h3>
+      <hr />
       <div class="skill-cards">
         <div class="skill-card">
           <h3>HTML</h3>
@@ -41,12 +43,22 @@
 </template>
 
 <style scoped>
+
+hr {
+  width: 75vw;
+  margin: 0 auto;
+}
 .container {
   background-color: #999;
   height: 1000px;
 }
 .section-title {
   display: flex;
+}
+.skill-cards-title {
+  font-size: 28px;
+  padding: 16px 40px;
+  
 }
 .skill-container {
   width: 80vw;
@@ -61,6 +73,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
+  margin-top: 20px;
 }
 .skill-card {
   margin: 0 auto;
