@@ -19,6 +19,7 @@
 .container {
   background-image: url("..//assets/Home.jpg");
   background-size: cover;
+  
 }
 
 .lead-text {

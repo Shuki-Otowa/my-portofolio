@@ -44,7 +44,7 @@ h2 {
   opacity: 1;
 }
 .v-enter-active {
-  transition: all 0.6s 0.6s ease;
+  transition: all 0.5s 0.5s ease;
 }
 .v-leave {
   transform: translate(0, 0);
@@ -55,6 +55,6 @@ h2 {
   opacity: 0;
 }
 .v-leave-active {
-  transition: all 0.6s 0s ease;
+  transition: all 0.5s 0s ease;
 }
 </style>
