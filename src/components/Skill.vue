@@ -55,7 +55,7 @@
   margin: 0 auto;
 }
 .skill-icon {
-  font-size: 60px;
+  font-size: 56px;
 }
 .skill-cards {
   display: grid;
