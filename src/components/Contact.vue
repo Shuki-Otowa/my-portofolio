@@ -6,6 +6,6 @@
 
 <style scoped>
 .container {
-  background-color: rgb(74, 202, 159);
+  background-color: #E6A5AB;
 }
 </style>

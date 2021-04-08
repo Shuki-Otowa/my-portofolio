@@ -67,7 +67,7 @@ a {
   text-decoration: none;
 }
 .container {
-  background-color: rgb(250, 137, 137);
+  background-color: #DCD1AE;
   height: 1000px;
 }
 
@@ -97,7 +97,7 @@ a {
 }
 
 .work-comment {
-  padding: 20px 10px;
+  padding: 20px 14px;
   text-align: left;
 }
 

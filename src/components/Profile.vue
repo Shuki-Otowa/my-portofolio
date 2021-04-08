@@ -20,14 +20,13 @@
 <style scoped>
 
 .container {
-  background-color: rgb(171, 48, 182);
+  background-color: #90C1CC;
 }
 
 .profile-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  color: aliceblue;
 }
 
 .profile-img {
@@ -45,9 +44,10 @@
   margin-top: 24px;
 }
 .me {
+  margin-top: 40px;
   widows: 350px;
   height: 350px;
-  border-radius: 50%;
+  border-radius: 56% 44% 61% 39% / 37% 67% 33% 63%;
   
 }
 </style>

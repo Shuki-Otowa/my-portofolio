@@ -28,7 +28,6 @@
 
 .vue-typer {
   font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
-  /* background-color: #D4D4BD; */
   font-size: 3.5rem;
   line-height: 1.5;
 }
