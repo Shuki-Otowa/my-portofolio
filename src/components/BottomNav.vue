@@ -23,7 +23,7 @@ export default {
       },
       {
         title: 'Profile',
-        icon: 'mdi-human-handsup',
+        icon: 'mdi-account-circle',
         path: '/profile'
       },
       {

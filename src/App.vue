@@ -31,9 +31,10 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Skia-Regular_Black", "ヒラギノ角ゴシック", "Hiragino Sans",
-    "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "Osaka", YuGothic,
-    "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
+  font-family: "Skia-Regular_Black", "TsukuARdGothic-Regular",
+    "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ丸ゴ ProN",
+    "Hiragino Maru Gothic ProN", "Osaka", YuGothic, "Yu Gothic", "Yu Gothic UI",
+    "メイリオ", Meiryo, sans-serif;
 }
 
 h2 {
@@ -66,5 +67,13 @@ h2 {
 }
 .v-leave-active {
   transition: all 0.6s 0s ease;
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-left: 0;
+  }
 }
 </style>
