@@ -2,9 +2,9 @@
   <div id="skill">
     <h2>Skill</h2>
     <div class="skill-container">
-      <h3 class="skill-cards-title">language</h3>
+      <h3 class="subtitle">language</h3>
       <hr />
-      <div class="card-container">
+      <div class="card-wrapper">
         <v-card
           v-for="card in cards"
           v-bind:key="card.title"
@@ -13,8 +13,11 @@
           outlined
         >
           <v-list class="card">
-            <v-icon large>{{ card.icon }} </v-icon>
+            <div class="skill-title">
             <v-list class="card-title">{{ card.title }}</v-list>
+            <v-icon large>{{ card.icon }} </v-icon>
+
+            </div>
             <v-list class="card-summary">{{ card.summary }}</v-list>
           </v-list>
         </v-card>
@@ -35,7 +38,7 @@ export default {
           title: "HTML",
           icon: "devicon-html5-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
           title: "CSS",
@@ -107,8 +110,11 @@ export default {
   margin: 0 auto;
   padding: 30px 0;
 }
-
-.card-container {
+.skill-title {
+  display: flex;
+  justify-content: center;
+}
+.card-wrapper {
   width: 95%;
   margin: 0 auto;
   display: grid;
@@ -127,7 +133,7 @@ hr {
   margin: 0 auto;
 }
 
-.skill-cards-title {
+.subtitle {
   font-size: 28px;
   padding: 0 60px 20px 60px;
 }
@@ -136,6 +142,7 @@ hr {
   margin: 0 auto;
   margin-top: 25px;
   padding: 0 20px;
+  border: 0;
 }
 
 .card {
@@ -143,7 +150,8 @@ hr {
   text-align: center;
 }
 .card-title {
-  font-size: 24px;
+  font-size: 28px;
+  margin-right: 10px;
 }
 
 .card-summary {
@@ -158,7 +166,7 @@ hr {
   .skill-cards-title {
     text-align: center;
   }
-  .card-container {
+  .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
 }
