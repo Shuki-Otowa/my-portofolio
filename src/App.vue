@@ -2,9 +2,19 @@
   <div id="app">
     <v-app>
       <div class="app-content">
-        <transition>
-          <router-view></router-view>
-        </transition>
+        <div v-show="loading" class="loader" key="loader">
+          <semipolar-spinner
+            :animation-duration="2000"
+            :size="65"
+            color="#ff1d5e"
+          />
+        </div>
+        <div v-show="!loading" key="notloader">
+          <transition>
+            <router-view></router-view>
+          </transition>
+        </div>
+
         <BottomNav></BottomNav>
       </div>
     </v-app>
@@ -13,15 +23,17 @@
 
 <script>
 import BottomNav from "./components/BottomNav";
+import { SemipolarSpinner } from "epic-spinners";
 
 export default {
   name: "app",
   components: {
     BottomNav,
+    SemipolarSpinner,
   },
 
   data: () => ({
-    //
+    loading: false,
   }),
 };
 </script>
@@ -30,10 +42,9 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family:"TsukuARdGothic-Regular",
-    "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ丸ゴ ProN",
-    "Hiragino Maru Gothic ProN", "Osaka", YuGothic, "Yu Gothic", "Yu Gothic UI",
-    "メイリオ", Meiryo, sans-serif;
+  font-family: "TsukuARdGothic-Regular", "ヒラギノ角ゴシック", "Hiragino Sans",
+    "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "Osaka", YuGothic,
+    "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
 }
 
 h2 {
@@ -43,7 +54,7 @@ h2 {
   margin-left: 20px;
   margin-bottom: 30px;
 }
-.title-jpn{
+.title-jpn {
   margin-left: 10px;
   font-size: 26px;
 }
@@ -79,9 +90,9 @@ h2 {
     font-size: 3rem;
     margin-left: 0;
   }
-  .title-jpn{
-  margin-left: 10px;
-  font-size: 16px;
-}
+  .title-jpn {
+    margin-left: 10px;
+    font-size: 16px;
+  }
 }
 </style>

@@ -107,7 +107,7 @@ a {
 #work {
   background-color: #dcd1ae;
   height: 100%;
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .work-items {

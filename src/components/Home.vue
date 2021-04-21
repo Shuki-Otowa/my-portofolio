@@ -20,6 +20,8 @@
   background-image: url("..//assets/Home.jpg");
   background-size: cover;
   height: 100vh;
+  margin-bottom: -80px;
+
 }
 
 .lead-text {
