@@ -1,7 +1,6 @@
 <template>
   <div class="bottom-nav-container">
-    <v-bottom-navigation grow  background-color="#f5f5f5" height="70px">
-      
+    <v-bottom-navigation grow background-color="#f5f5f5" height="80px">
       <v-btn v-for="menu in menus" :key="menu.title" :to="menu.path">
         <span>{{ menu.title }}</span>
         <v-icon>{{ menu.icon }}</v-icon>
@@ -59,8 +58,14 @@ export default {
 }
 
 .v-btn {
-  height: 70px !important;
+  height: 80px !important;
 }
+
+.v-btn--active {
+  background-color: rgba(0, 0, 0, .8) !important;
+  color: #f5f5f5 !important;
+}
+
 </style> 
 
 

@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import "devicon";
 import BottomNav from "./components/BottomNav";
 
 export default {
@@ -31,17 +30,22 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Skia-Regular_Black", "TsukuARdGothic-Regular",
+  font-family:"TsukuARdGothic-Regular",
     "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ丸ゴ ProN",
     "Hiragino Maru Gothic ProN", "Osaka", YuGothic, "Yu Gothic", "Yu Gothic UI",
     "メイリオ", Meiryo, sans-serif;
 }
 
 h2 {
+  font-family: "Skia-Regular_Black", "TsukuARdGothic-Regular";
   color: aliceblue;
   font-size: 6rem;
   margin-left: 20px;
   margin-bottom: 30px;
+}
+.title-jpn{
+  margin-left: 10px;
+  font-size: 26px;
 }
 .container {
   width: 100vw;
@@ -72,8 +76,12 @@ h2 {
 @media screen and (max-width: 600px) {
   h2 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-left: 0;
   }
+  .title-jpn{
+  margin-left: 10px;
+  font-size: 16px;
+}
 }
 </style>

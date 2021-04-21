@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h2>Profile</h2>
+  <div id="profile">
+    <h2>Profile<span class="title-jpn">自己紹介</span></h2>
     <div class="profile-container">
       <div class="profile-img">
         <img src="../assets/me.jpeg" alt="" class="me" />
@@ -18,9 +18,10 @@
 </template>
 
 <style scoped>
-
-.container {
-  background-color: #90C1CC;
+#profile {
+  background-color: #90c1cc;
+  height: 100%;
+  margin-bottom: 150px;
 }
 
 .profile-container {
@@ -38,7 +39,6 @@
   margin: 0 auto;
   padding: 20px 0;
   line-height: 2em;
-
 }
 .name {
   margin-top: 24px;
@@ -48,6 +48,26 @@
   widows: 350px;
   height: 350px;
   border-radius: 56% 44% 61% 39% / 37% 67% 33% 63%;
-  
+}
+.me:hover {
+  widows: 350px;
+  height: 350px;
+  border-radius: 56% 44% 61% 39% / 37% 67% 33% 63%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .profile-container {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+.profile-text {
+  margin-top: 24px;
+  width: 80%;
+}
+.me {
+  margin-top: 0;
+}
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="skill">
-    <h2>Skill</h2>
+    <h2>Skill<span class="title-jpn">保有スキル</span></h2>
     <div class="skill-container">
       <h3 class="subtitle">language</h3>
       <hr />
@@ -14,7 +14,7 @@
         >
           <v-list class="card">
             <div class="skill-title">
-            <v-list class="card-title">{{ card.title }}</v-list>
+            <v-list class="card-title"><h4>{{ card.title }}</h4></v-list>
             <v-icon large>{{ card.icon }} </v-icon>
 
             </div>
@@ -27,10 +27,8 @@
 </template>
 
 <script>
-import "devicon";
 
 export default {
-  auth: false,
   data() {
     return {
       cards: [
@@ -43,7 +41,6 @@ export default {
         {
           title: "CSS",
           icon: "devicon-css3-plain",
-
           summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
@@ -55,19 +52,31 @@ export default {
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
-          title: "Javascript",
+          title: "bootstrap",
+          icon: "devicon-bootstrap-plain",
+          summary:
+            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+        },
+        {
+          title: "jQuery",
+          icon: "devicon-jquery-plain",
+          summary:
+            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+        },
+        {
+          title: "JavaScript",
           icon: "devicon-javascript-plain",
           summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
-          title: "Vue",
+          title: "Vue.js",
           icon: "devicon-vuejs-plain",
           summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
-          title: "firebase",
+          title: "Firebase",
           icon: "devicon-firebase-plain",
           summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
@@ -91,12 +100,11 @@ export default {
 </script>
 
 <style scoped>
-
 #skill {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #91ab9c;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .container {
@@ -121,20 +129,13 @@ export default {
   grid-template-columns: repeat(2, 1fr);
 }
 
-h2 {
-  color: aliceblue;
-  font-size: 6rem;
-  margin-left: 20px;
-  margin-bottom: 30px;
-}
-
 hr {
   width: 90%;
   margin: 0 auto;
 }
 
 .subtitle {
-  font-size: 28px;
+  font-size: 32px;
   padding: 0 60px 20px 60px;
 }
 
@@ -150,7 +151,7 @@ hr {
   text-align: center;
 }
 .card-title {
-  font-size: 28px;
+  font-size: 26px;
   margin-right: 10px;
 }
 
@@ -163,7 +164,7 @@ hr {
     width: 85%;
     margin: 0 auto;
   }
-  .skill-cards-title {
+  .subtitle {
     text-align: center;
   }
   .card-wrapper {
