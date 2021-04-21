@@ -1,22 +1,20 @@
 <template>
   <div id="app">
     <v-app>
-      <div class="app-content">
-        <div v-show="loading" class="loader" key="loader">
-          <semipolar-spinner
-            :animation-duration="2000"
-            :size="65"
-            color="#ff1d5e"
-          />
-        </div>
-        <div v-show="!loading" key="notloader">
-          <transition>
-            <router-view></router-view>
-          </transition>
-        </div>
-
-        <BottomNav></BottomNav>
+      <div v-show="loading" class="loader" key="loader">
+        <semipolar-spinner
+          :animation-duration="2000"
+          :size="100"
+          color="#ccc"
+          class="loader"
+        />
       </div>
+      <div v-show="!loading">
+        <transition>
+          <router-view></router-view>
+        </transition>
+      </div>
+      <BottomNav v-show="!loading"></BottomNav>
     </v-app>
   </div>
 </template>
@@ -27,14 +25,20 @@ import { SemipolarSpinner } from "epic-spinners";
 
 export default {
   name: "app",
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
+  },
   components: {
     BottomNav,
     SemipolarSpinner,
   },
-
-  data: () => ({
-    loading: false,
-  }),
 };
 </script>
 
@@ -42,13 +46,15 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family: "TsukuARdGothic-Regular", "ヒラギノ角ゴシック", "Hiragino Sans",
-    "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "Osaka", YuGothic,
-    "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
+  line-height: 2em;
+  letter-spacing: 1.5px;
+  font-family: "TsukuARdGothic-Regular", "ヒラギノ丸ゴ ProN",
+    "ヒラギノ角ゴシック", "Hiragino Sans", "Hiragino Maru Gothic ProN", "Osaka",
+    YuGothic, "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
 }
 
 h2 {
-  font-family: "Skia-Regular_Black", "TsukuARdGothic-Regular";
+  font-family: "Skia-Regular_Black";
   color: aliceblue;
   font-size: 6rem;
   margin-left: 20px;
@@ -62,6 +68,7 @@ h2 {
   width: 100vw;
   height: 100vh;
 }
+
 .v-enter {
   transform: translate(100vw, 0);
   opacity: 0;
@@ -70,7 +77,7 @@ h2 {
   opacity: 1;
 }
 .v-enter-active {
-  transition: all 0.6s 0.6s ease;
+  transition: all 0.5s 0.5s ease;
 }
 .v-leave {
   transform: translate(0, 0);
@@ -81,7 +88,7 @@ h2 {
   opacity: 0;
 }
 .v-leave-active {
-  transition: all 0.6s 0s ease;
+  transition: all 0.5s 0s ease;
 }
 
 @media screen and (max-width: 600px) {
@@ -94,5 +101,14 @@ h2 {
     margin-left: 10px;
     font-size: 16px;
   }
+}
+
+.loader {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 </style>
