@@ -5,45 +5,42 @@
         <span>{{ menu.title }}</span>
         <v-icon>{{ menu.icon }}</v-icon>
       </v-btn>
-
     </v-bottom-navigation>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
   data: () => ({
     menus: [
       {
-        title: 'Home',
-        icon: 'mdi-home-variant',
-        path: '/'
+        title: "Home",
+        icon: "mdi-home-variant",
+        path: "/",
       },
       {
-        title: 'Profile',
-        icon: 'mdi-account-circle',
-        path: '/profile'
+        title: "Profile",
+        icon: "mdi-account-circle",
+        path: "/profile",
       },
       {
-        title: 'Skill',
-        icon: 'mdi-hammer-wrench',
-        path: '/skill'
+        title: "Skill",
+        icon: "mdi-hammer-wrench",
+        path: "/skill",
       },
       {
-        title: 'Work',
-        icon: 'mdi-iframe',
-        path: '/work'
+        title: "Work",
+        icon: "mdi-iframe",
+        path: "/work",
       },
       {
-        title: 'Contact',
-        icon: 'mdi-email-receive',
-        path: '/contact'
+        title: "Contact",
+        icon: "mdi-email-receive",
+        path: "/contact",
       },
-    ]
-  })
-}
-
+    ],
+  }),
+};
 </script>
 
 <style>
@@ -62,10 +59,9 @@ export default {
 }
 
 .v-btn--active {
-  background-color: rgba(0, 0, 0, .8) !important;
+  background-color: #939597 !important;
   color: #f5f5f5 !important;
 }
-
 </style> 
 
 

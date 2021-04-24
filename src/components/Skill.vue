@@ -2,7 +2,7 @@
   <div id="skill">
     <h2>Skill<span class="title-jpn">保有スキル</span></h2>
     <div class="skill-container">
-      <h3 class="subtitle">language</h3>
+      <h3 class="subtitle">My Skills</h3>
       <hr />
       <div class="card-wrapper">
         <v-card
@@ -14,9 +14,10 @@
         >
           <v-list class="card">
             <div class="skill-title">
-            <v-list class="card-title"><h4>{{ card.title }}</h4></v-list>
-            <v-icon large>{{ card.icon }} </v-icon>
-
+              <v-list class="card-title"
+                ><h4>{{ card.title }}</h4></v-list
+              >
+              <v-icon large>{{ card.icon }} </v-icon>
             </div>
             <v-list class="card-summary">{{ card.summary }}</v-list>
           </v-list>
@@ -27,7 +28,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -54,12 +54,6 @@ export default {
         {
           title: "bootstrap",
           icon: "devicon-bootstrap-plain",
-          summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
-        },
-        {
-          title: "jQuery",
-          icon: "devicon-jquery-plain",
           summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
@@ -101,14 +95,8 @@ export default {
 
 <style scoped>
 #skill {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #91ab9c;
   padding-bottom: 150px;
-}
-
-.container {
-  background-color: #91ab9c;
 }
 
 .skill-container {
@@ -141,7 +129,7 @@ hr {
 
 .cards {
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 10px;
   padding: 0 20px;
   border: 0;
 }
@@ -159,17 +147,25 @@ hr {
   text-align: left;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+  .skill-container {
+  padding: 16px 0;
+}
   hr {
     width: 85%;
     margin: 0 auto;
   }
   .subtitle {
+    padding: 0 ;
     text-align: center;
     font-size: 28px;
   }
   .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .cards {
+    margin-top: 0px;
+    padding: 2px;
   }
 }
 </style>

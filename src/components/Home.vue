@@ -2,13 +2,13 @@
   <div id="home">
     <div class="lead-text">
       <vue-typer
-        :text="['Hello World.\nThank you for visiting\nmy portfolio.']"
-        class="top-text"
+        :text="['Thank you for visiting\nmy portfolio.']"
         :repeat="0"
         :preTypeDelay="1000"
-        :typeDelay="120"
+        :typeDelay="150"
         :preEraseDelay="5000"
         :eraseDelay="2000"
+
         
       ></vue-typer>
     </div>
@@ -20,18 +20,27 @@
   background-image: url("..//assets/Home.jpg");
   background-size: cover;
   height: 100vh;
-  margin-bottom: -80px;
+  /* margin-bottom: -80px; */
 
 }
 
 .lead-text {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
 }
 
 .vue-typer {
-  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
-  font-size: 3.5rem;
-  line-height: 1.5;
+  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+  font-size: 5rem;
 }
 
+@media screen and (max-width: 600px) {
+.vue-typer {
+  font-size: 1.8rem;
+}
+}
 </style>

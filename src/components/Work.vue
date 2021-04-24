@@ -2,8 +2,6 @@
   <div id="work">
     <h2>Work<span class="title-jpn">製作物</span></h2>
     <div class="work-items">
-
-
       <div class="work-item">
         <a href="" class="work-link">
           <img src="../assets/Profile.jpg" alt="" class="work-img" />
@@ -23,13 +21,14 @@
           <h3 class="subtitle">製作物へのリンク</h3>
           <div class="icons-link">
             <a href="https://github.com/Shuki-Otowa/my-portofolio"
-              ><v-icon class="aaa" large>devicon-github-original-wordmark</v-icon></a
+              ><v-icon class="aaa" large
+                >devicon-github-original-wordmark</v-icon
+              ></a
             >
-            <a href=""><v-icon  class="aaa" large>mdi-web</v-icon></a>
+            <a href=""><v-icon class="aaa" large>mdi-web</v-icon></a>
           </div>
         </div>
       </div>
-
 
       <div class="work-item">
         <a href="" class="work-link">
@@ -57,7 +56,6 @@
         </div>
       </div>
 
-
       <div class="work-item">
         <a href="" class="work-link">
           <img src="../assets/Contact.jpg" alt="" class="work-img" />
@@ -83,8 +81,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 </template>
@@ -132,7 +128,7 @@ a {
 
 .work-img {
   width: 100%;
-  height: 240px;
+  height: 30%;
   object-fit: cover;
   border-radius: 30px 30px 0 0;
 }
@@ -142,19 +138,19 @@ a {
   text-align: left;
 }
 
-.subtitle{
+.subtitle {
   font-size: 20px;
   padding: 20px 0;
 }
 
 .icons-skill {
-  /* padding: 10px 0; */
+  padding: 10px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
 }
 .icons-link {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -170,13 +166,19 @@ a {
 }
 .aaa:hover {
   /* background-color: #222; */
-  opacity: .4;
-  transition: all .6s ease;
+  opacity: 0.4;
+  transition: all 0.6s ease;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .work-items {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .work-img {
+    height: 20%;
+  }
+  .work-comment {
+    padding: 0 4px;
   }
 }
 </style>
