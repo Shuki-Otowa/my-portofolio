@@ -1,5 +1,6 @@
 <template>
   <div id="skill">
+    <div class="container">
     <h2>Skill<span class="title-jpn">保有スキル</span></h2>
     <div class="skill-container">
       <h3 class="subtitle">My Skills</h3>
@@ -23,6 +24,7 @@
           </v-list>
         </v-card>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -97,13 +99,19 @@ export default {
 #skill {
   background-color: #91ab9c;
   padding-bottom: 150px;
+
+}
+.container{
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .skill-container {
+  max-width: 1280px;
+  margin: 0 auto;
   width: 90%;
   background-color: #fff;
   border-radius: 30px;
-  margin: 0 auto;
   padding: 30px 0;
 }
 .skill-title {
@@ -149,14 +157,14 @@ hr {
 
 @media screen and (max-width: 800px) {
   .skill-container {
-  padding: 16px 0;
-}
+    padding: 16px 0;
+  }
   hr {
     width: 85%;
     margin: 0 auto;
   }
   .subtitle {
-    padding: 0 ;
+    padding: 0;
     text-align: center;
     font-size: 28px;
   }

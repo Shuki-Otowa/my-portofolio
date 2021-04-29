@@ -1,83 +1,55 @@
 <template>
   <div id="work">
-    <h2>Work<span class="title-jpn">製作物</span></h2>
-    <div class="work-items">
-      <div class="work-item">
-        <a href="" class="work-link">
+    <div class="container">
+      <h2>Work<span class="title-jpn">製作物</span></h2>
+      <div class="work-items">
+        <div class="work-item">
           <img src="../assets/Profile.jpg" alt="" class="work-img" />
-        </a>
-        <h3 class="subtitle">製作物の名前</h3>
-        <div class="work-item-content">
+          <h3 class="subtitle">製作物の名前</h3>
           <p class="work-comment">
             ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
           </p>
           <h3 class="subtitle">使用したスキル</h3>
-          <div class="icons-skill">
-            <v-icon large>devicon-html5-plain</v-icon>
-            <v-icon large>devicon-css3-plain</v-icon>
-            <v-icon large>devicon-vuejs-plain</v-icon>
-            <v-icon large>devicon-npm-original-wordmark</v-icon>
+          <div class="useSkill" v-for="skill1 in skills1" :key="skill1">
+            {{ skill1 }}
           </div>
           <h3 class="subtitle">製作物へのリンク</h3>
           <div class="icons-link">
-            <a href="https://github.com/Shuki-Otowa/my-portofolio"
-              ><v-icon class="aaa" large
-                >devicon-github-original-wordmark</v-icon
-              ></a
-            >
-            <a href=""><v-icon class="aaa" large>mdi-web</v-icon></a>
+            <a href="" class="link"><p>GitHub</p></a>
           </div>
         </div>
-      </div>
 
-      <div class="work-item">
-        <a href="" class="work-link">
+        <div class="work-item">
           <img src="../assets/Skill.jpg" alt="" class="work-img" />
-        </a>
-        <h3 class="subtitle">製作物の名前</h3>
-        <div class="work-item-content">
+          <h3 class="subtitle">製作物の名前</h3>
           <p class="work-comment">
             ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
           </p>
           <h3 class="subtitle">使用したスキル</h3>
-          <div class="icons-skill">
-            <v-icon large>devicon-html5-plain</v-icon>
-            <v-icon large>devicon-css3-plain</v-icon>
-            <v-icon large>devicon-vuejs-plain</v-icon>
-            <v-icon large>devicon-npm-original-wordmark</v-icon>
+          <div class="useSkill" v-for="skill2 in skills2" :key="skill2">
+            {{ skill2 }}
           </div>
           <h3 class="subtitle">製作物へのリンク</h3>
           <div class="icons-link">
-            <a href=""
-              ><v-icon large>devicon-github-original-wordmark</v-icon></a
-            >
-            <a href=""><v-icon large>mdi-web</v-icon></a>
+            <a href="" class="link"><p>GitHub</p></a>
+            <a href="" class="link"><p>Webサイト</p></a>
           </div>
         </div>
-      </div>
 
-      <div class="work-item">
-        <a href="" class="work-link">
+        <div class="work-item">
           <img src="../assets/Contact.jpg" alt="" class="work-img" />
-        </a>
-        <h3 class="subtitle">製作物の名前</h3>
-        <div class="work-item-content">
+          <h3 class="subtitle">製作物の名前</h3>
           <p class="work-comment">
-            ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
+            ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
           </p>
           <h3 class="subtitle">使用したスキル</h3>
-          <div class="icons-skill">
-            <v-icon large>devicon-html5-plain</v-icon>
-            <v-icon large>devicon-css3-plain</v-icon>
-            <v-icon large>devicon-vuejs-plain</v-icon>
-            <v-icon large>devicon-npm-original-wordmark</v-icon>
+          <div class="useSkill" v-for="skill3 in skills3" :key="skill3">
+            {{ skill3 }}
           </div>
           <h3 class="subtitle">製作物へのリンク</h3>
           <div class="icons-link">
-            <a href=""
-              ><v-icon large>devicon-github-original-wordmark</v-icon></a
-            >
-            <a href=""><v-icon large>mdi-web</v-icon></a>
+            <a href="" class="link"><p>GitHub</p></a>
+            <a href="" class="link"><p>Webサイト</p></a>
           </div>
         </div>
       </div>
@@ -91,6 +63,17 @@ export default {
   data() {
     return {
       dialog: false,
+      skills1: [
+        "#HTML",
+        "#CSS",
+        "#Vue.js",
+        "#Vuetify",
+        "#axios",
+        "#Firebase",
+        "#Netlify",
+      ],
+      skills2: ["#HTML", "#CSS", "#Vue.js", "#Firebase"],
+      skills3: ["#HTML", "#SCSS", "#Vue.js", "#Firebase", "#bootstrap"],
     };
   },
 };
@@ -102,12 +85,17 @@ a {
 }
 #work {
   background-color: #dcd1ae;
-  height: 100%;
+  min-height: 100%;
   padding-bottom: 150px;
+}
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .work-items {
-  width: 90%;
+  width: 95%;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,24 +106,21 @@ a {
   text-align: center;
   background-color: #fff;
   border-radius: 30px;
-  height: 100%;
-}
-
-.work-item-content {
-  margin: 0 auto;
-  max-width: 90%;
+  height: fit-content;
+  padding-bottom: 30px;
 }
 
 .work-img {
   width: 100%;
-  height: 30%;
+  height: 20%;
   object-fit: cover;
   border-radius: 30px 30px 0 0;
 }
 
 .work-comment {
-  padding: 0 14px;
+  padding: 0 20px;
   text-align: left;
+  margin: 0;
 }
 
 .subtitle {
@@ -143,42 +128,52 @@ a {
   padding: 20px 0;
 }
 
-.icons-skill {
-  padding: 10px;
-  margin-bottom: 20px;
+.useSkill {
+  display: inline-block;
+  background-color: #dcd1ae;
+  margin: 10px 6px;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+.icons-link {
   display: flex;
   justify-content: space-evenly;
 }
-.icons-link {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-evenly;
+
+.link {
+  display: inline-block;
+  width: 40%;
+  background-color: #dcd1ae;
+  border-radius: 10px;
+  padding: 8px 0;
+  color: #000;
 }
 
 .v-application p {
   margin-bottom: 0;
 }
-
-.aaa {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-.aaa:hover {
-  /* background-color: #222; */
-  opacity: 0.4;
+.link:hover {
+  opacity: 0.8;
   transition: all 0.6s ease;
 }
 
 @media screen and (max-width: 1024px) {
   .work-items {
+    width: 98%;
     grid-template-columns: repeat(1, 1fr);
   }
-  .work-img {
-    height: 20%;
-  }
-  .work-comment {
-    padding: 0 4px;
-  }
+  .icons-link {
+    flex-direction: column;
+
+}
+  .link {
+    border-radius: 10px;
+
+  width: 90%;
+  padding: 10px 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 }
 </style>

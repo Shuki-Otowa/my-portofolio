@@ -19,7 +19,7 @@
 #home {
   background-image: url("..//assets/Home.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   /* margin-bottom: -80px; */
 
 }
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 600px) {
 .vue-typer {
-  font-size: 1.8rem;
+  font-size: 28px;
 }
 }
 </style>

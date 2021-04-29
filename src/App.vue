@@ -2,10 +2,11 @@
   <div id="app">
     <v-app>
       <!-- v-show="loading" -->
+
       <div v-show="loading" class="loader" key="loader">
         <p class="loader-text">a few moments later</p>
         <semipolar-spinner
-          :animation-duration="1800"
+          :animation-duration="1000"
           :size="100"
           color="#f5f5f5"
         />
@@ -25,7 +26,6 @@ import BottomNav from "./components/BottomNav";
 import { SemipolarSpinner } from "epic-spinners";
 
 export default {
-  name: "app",
   data() {
     return {
       loading: true,
@@ -34,7 +34,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 1000);
+    }, 3000);
   },
   components: {
     BottomNav,
@@ -44,20 +44,23 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=Kaushan+Script&family=Kiwi+Maru:wght@300&family=Luckiest+Guy&family=M+PLUS+Rounded+1c:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   line-height: 2em;
   letter-spacing: 1.5px;
-  font-family: "TsukuARdGothic-Regular", "ヒラギノ丸ゴ ProN",
-    "ヒラギノ角ゴシック", "Hiragino Sans", "Hiragino Maru Gothic ProN", "Osaka",
-    YuGothic, "Yu Gothic", "Yu Gothic UI", "メイリオ", Meiryo, sans-serif;
+  font-family: "TsukuARdGothic-Regular", "M PLUS Rounded 1c", "Kiwi Maru",
+    "ヒラギノ丸ゴ ProN", "ヒラギノ角ゴシック", "Hiragino Sans",
+    "Hiragino Maru Gothic ProN", "Osaka", YuGothic, "Yu Gothic", "Yu Gothic UI",
+    "メイリオ", Meiryo, sans-serif;
 }
 
 h2 {
-  font-family: "Skia-Regular_Black", "Impact", "Marker Felt";
+  font-family: "Alfa Slab One", "Skia-Regular_Black";
   color: #fff;
-  font-size: 96px;
+  font-size: 90px;
   margin-top: -20px;
   margin-left: 20px;
   margin-bottom: 30px;
@@ -100,12 +103,12 @@ h2 {
 
 .loader-text {
   color: #f5f5f5;
-  font-size: 90px;
-  font-family: "Skia-Regular_Black";
+  font-size: 60px;
+  font-family: "Caveat", "Kaushan Script", "Skia-Regular_Black";
   letter-spacing: 8px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   h2 {
     text-align: center;
     font-size: 50px;
@@ -118,6 +121,7 @@ h2 {
     font-size: 16px;
   }
   .loader {
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,8 +131,7 @@ h2 {
   }
 
   .loader-text {
-    padding-bottom: 30px;
-    font-size: 24px;
+    font-size: 38px;
     letter-spacing: 2px;
   }
 }

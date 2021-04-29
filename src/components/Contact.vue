@@ -1,9 +1,10 @@
 <template>
   <div id="cantact">
-    <h2>Contact<span class="title-jpn">お問合せ</span></h2>
+    <div class="container1">
 
-    <v-app class="vapp">
-      <v-container style="width: 85%">
+    <h2>Contact<span class="title-jpn">お問合せ</span></h2>
+    <v-container class="container">
+      <div class="form-container">
         <v-form class="aaa" ref="form" v-if="showForm">
           <v-card-title class="form-title">お名前</v-card-title>
           <v-textarea
@@ -21,7 +22,7 @@
             auto-grow
             rows="1"
             no-resize
-            placeholder="example@mail.co.jp"
+            placeholder="example@co.jp"
             v-model="mail"
             :rules="[rules.required, rules.email]"
           ></v-textarea>
@@ -35,26 +36,18 @@
             :rules="[rules.required, rules.length]"
             counter="<10"
           ></v-textarea>
-          <v-btn
-            depressed
-            ripple
-            block
-            color="#C44"
-            dark
-            v-on:click="request"
-            style="font-size: 24px; margin-top: 50px; border-radius: 20px"
-            >送信</v-btn
-          >
+          <v-btn depressed ripple block v-on:click="request">送 信</v-btn>
         </v-form>
-        <div class="formSucess" v-else>
-          <p>
+        <div class="formSuccess" v-else>
+          <p class="formSuccessComment">
             お問い合わせありがとうございます!<br />
-            お問い合わせの内容が登録されました。3日以内にご連絡いたします。
+            お問い合わせの内容が登録されました。3日以内にご連絡いたしますので少々お待ちください。
           </p>
+          <img src="..//assets/Sending emails_Monochromatic (1).svg" alt="" />
         </div>
-        <p class="copylight">@Shuki Otowa 2021</p>
-      </v-container>
-    </v-app>
+      </div>
+    </v-container>
+    </div>
   </div>
 </template>
 
@@ -115,14 +108,22 @@ export default {
 #cantact {
   background-color: #e6a5ab;
   padding-bottom: 150px;
-
+  min-height: 100vh;
 }
-.vapp {
-  height: 700px;
-  width: 90%;
-  border-radius: 30px;
+.container1{
+  max-width: 1800px;
   margin: 0 auto;
+}
+.container {
+  width: 90%;
+  max-width: 1280px;
+  border-radius: 30px;
+  padding-bottom: 52px;
   background-color: #fff;
+}
+.form-container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .form-title {
@@ -131,9 +132,6 @@ export default {
   font-size: 24px;
 }
 
-.aaa:first-child {
-  margin-top: 60px;
-}
 .form-title::before {
   margin-right: 6px;
   padding: 0px 10px;
@@ -147,30 +145,40 @@ export default {
 .form-text {
   font-size: 18px;
 }
-.formSucess {
+
+.formSuccess {
   font-size: 22px;
   margin-top: 40px;
 }
 
-.copylight {
-  text-align: center;
-  margin-top: 30px;
+.formSuccess img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+button {
+  /* height: 60px !important; */
+  font-size: 24px !important;
+  margin-top: 60px;
+  border-radius: 20px;
+  background-color: #c44 !important;
+  color: #fff !important;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
-  #cantact {
-    height: 100%;
-  }
-  .vapp {
-    height: 600px;
+  
+  .container {
+    padding-bottom: 60px;
   }
   .form-title {
-    margin-top: 30px;
     font-size: 18px;
+    margin-top: 10px;
   }
-
-  .aaa:first-child {
-    margin-top: 0;
+  .form-title:first-child {
+    padding-top: 30px;
   }
 
   .form-title::before {
@@ -182,19 +190,19 @@ export default {
   .form-text {
     font-size: 16px;
   }
-  .formSucess {
+  .formSuccess {
     font-size: 18px;
-    margin-top: 30px;
-  }
-
-  .copylight {
-    text-align: center;
     margin-top: 20px;
   }
+  .formSuccess img {
+    width: 100%;
+    padding: 20px 0;
+  }
   button {
-    margin-top: 30px !important;
+    margin-top: 40px !important;
     height: 60px !important;
     font-size: 18px !important;
+    border-radius: 10px !important;
   }
 }
 </style>

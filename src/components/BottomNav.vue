@@ -62,6 +62,17 @@ export default {
   background-color: #939597 !important;
   color: #f5f5f5 !important;
 }
+
+
+@media screen and (max-width: 1024px) {
+.v-bottom-navigation {
+  justify-content: space-evenly !important;
+}
+.v-btn {
+  width: 100% !important;
+}
+
+}
 </style> 
 
 
