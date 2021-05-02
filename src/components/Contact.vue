@@ -1,11 +1,10 @@
 <template>
-  <div id="cantact">
-    <div class="container1">
-
-    <h2>Contact<span class="title-jpn">お問合せ</span></h2>
-    <v-container class="container">
-      <div class="form-container">
-        <v-form class="aaa" ref="form" v-if="showForm">
+  <div class="cantact-section section">
+    <div class="wrapper">
+      <h2 class="h2-title">Contact<span class="title-jpn">お問合せ</span></h2>
+      <p>ご質問、ご感想、お仕事のご相談等、お気軽にお問い合わせください。</p>
+      <v-container class="form-wrapper">
+        <v-form ref="form" v-if="showForm">
           <v-card-title class="form-title">お名前</v-card-title>
           <v-textarea
             class="form-text"
@@ -38,15 +37,14 @@
           ></v-textarea>
           <v-btn depressed ripple block v-on:click="request">送 信</v-btn>
         </v-form>
-        <div class="formSuccess" v-else>
-          <p class="formSuccessComment">
+        <div class="form-success" v-else>
+          <p class="form-success-comment">
             お問い合わせありがとうございます!<br />
             お問い合わせの内容が登録されました。3日以内にご連絡いたしますので少々お待ちください。
           </p>
           <img src="..//assets/Sending emails_Monochromatic (1).svg" alt="" />
         </div>
-      </div>
-    </v-container>
+      </v-container>
     </div>
   </div>
 </template>
@@ -105,25 +103,16 @@ export default {
 
 
 <style scoped>
-#cantact {
+.cantact-section {
   background-color: #e6a5ab;
-  padding-bottom: 150px;
-  min-height: 100vh;
 }
-.container1{
-  max-width: 1800px;
-  margin: 0 auto;
-}
-.container {
-  width: 90%;
+
+.form-wrapper {
   max-width: 1280px;
-  border-radius: 30px;
-  padding-bottom: 52px;
-  background-color: #fff;
-}
-.form-container {
+  padding: 30px 80px 50px;
   width: 90%;
-  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #fff;
 }
 
 .form-title {
@@ -143,15 +132,14 @@ export default {
 }
 
 .form-text {
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.formSuccess {
-  font-size: 22px;
-  margin-top: 40px;
+.form-success {
+  padding-top: 20px;
 }
 
-.formSuccess img {
+.form-success img {
   width: 40%;
   display: block;
   margin: 0 auto;
@@ -159,7 +147,6 @@ export default {
 }
 
 button {
-  /* height: 60px !important; */
   font-size: 24px !important;
   margin-top: 60px;
   border-radius: 20px;
@@ -167,36 +154,38 @@ button {
   color: #fff !important;
   font-weight: bold;
 }
-
+.v-messages__message {
+  color: red !important;
+  font-size: 19px !important;
+  padding: 10px 0 !important;
+}
 @media screen and (max-width: 800px) {
-  
-  .container {
+  .wrapper {
     padding-bottom: 60px;
   }
-  .form-title {
-    font-size: 18px;
-    margin-top: 10px;
+  .form-wrapper {
+    padding: 20px;
   }
-  .form-title:first-child {
-    padding-top: 30px;
+  .form-title {
+    font-size: 1.3rem;
+    margin-top: 15px;
   }
 
   .form-title::before {
     padding: 0 8px;
-    font-size: 12px;
-    content: "必 須";
+    font-size: 0.8rem;
   }
 
   .form-text {
-    font-size: 16px;
+    font-size: 1rem;
   }
-  .formSuccess {
-    font-size: 18px;
+  .form-success {
+    font-size: 1rem;
     margin-top: 20px;
   }
-  .formSuccess img {
+  .form-success img {
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 0 50px;
   }
   button {
     margin-top: 40px !important;

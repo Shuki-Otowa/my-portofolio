@@ -1,30 +1,26 @@
 <template>
-  <div id="skill">
-    <div class="container">
-    <h2>Skill<span class="title-jpn">保有スキル</span></h2>
-    <div class="skill-container">
-      <h3 class="subtitle">My Skills</h3>
-      <hr />
-      <div class="card-wrapper">
-        <v-card
-          v-for="card in cards"
-          v-bind:key="card.title"
-          class="cards"
-          max-width="90%"
-          outlined
-        >
-          <v-list class="card">
+  <div class="section-skill section">
+    <div class="wrapper">
+      <h2 class="h2-title">Skill<span class="title-jpn">保有スキル</span></h2>
+      <p>Progateや、Udemyを使用してフォク額</p>
+      <div class="skill-wrapper">
+        <h3 class="lead-text">My Skills</h3>
+        <hr />
+        <div class="skill-list">
+          <div
+            class="skill-item"
+            v-for="skill in skills"
+            v-bind:key="skill.title"
+            outlined
+          >
             <div class="skill-title">
-              <v-list class="card-title"
-                ><h4>{{ card.title }}</h4></v-list
-              >
-              <v-icon large>{{ card.icon }} </v-icon>
+              <h4 class="skill-name">{{ skill.title }}</h4>
+              <v-icon large>{{ skill.icon }} </v-icon>
             </div>
-            <v-list class="card-summary">{{ card.summary }}</v-list>
-          </v-list>
-        </v-card>
+            <div class="skill-summary">{{ skill.summary }}</div>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -33,25 +29,25 @@
 export default {
   data() {
     return {
-      cards: [
+      skills: [
         {
           title: "HTML",
           icon: "devicon-html5-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "レスポンシブサイトのコーディング。正しい文法で、UXが高く、コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。",
         },
         {
           title: "CSS",
           icon: "devicon-css3-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "レスポンシブサイトのコーディング。正しい文法で、UXが高く、コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。",
         },
         {
           title: "SCSS",
           icon: "devicon-sass-plain",
 
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
           title: "bootstrap",
@@ -66,10 +62,16 @@ export default {
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
         {
+          title: "jQuery",
+          icon: "devicon-jquery-plain",
+          summary:
+            "Webサイトに動きをつけるためスライダー、モーダル、",
+        },
+        {
           title: "Vue.js",
           icon: "devicon-vuejs-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "基本的な知識、各種ディレクティブやVueRouter,Vuetify,Vuexなどを学習し、本サイトもVue.jsで開発しています。",
         },
         {
           title: "Firebase",
@@ -96,20 +98,17 @@ export default {
 </script>
 
 <style scoped>
-#skill {
+.section-skill {
   background-color: #91ab9c;
-  padding-bottom: 150px;
-
 }
-.container{
-  max-width: 1800px;
-  margin: 0 auto;
+.wrapper {
+  text-align: center;
 }
 
-.skill-container {
+.skill-wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   background-color: #fff;
   border-radius: 30px;
   padding: 30px 0;
@@ -117,8 +116,13 @@ export default {
 .skill-title {
   display: flex;
   justify-content: center;
+  font-size: 1.5rem;
+  margin-top: 40px;
 }
-.card-wrapper {
+.skill-name {
+  margin-right: 8px;
+}
+.skill-list {
   width: 95%;
   margin: 0 auto;
   display: grid;
@@ -130,50 +134,26 @@ hr {
   margin: 0 auto;
 }
 
-.subtitle {
-  font-size: 32px;
+.lead-text {
+  font-size: 1.8rem;
   padding: 0 60px 20px 60px;
 }
 
-.cards {
-  margin: 0 auto;
-  margin-top: 10px;
+.skill-item {
   padding: 0 20px;
-  border: 0;
 }
 
-.card {
-  margin: 0 auto;
-  text-align: center;
-}
-.card-title {
-  font-size: 26px;
-  margin-right: 10px;
-}
-
-.card-summary {
+.skill-summary {
+  margin-top: 10px;
   text-align: left;
 }
 
 @media screen and (max-width: 800px) {
-  .skill-container {
-    padding: 16px 0;
-  }
   hr {
     width: 85%;
-    margin: 0 auto;
   }
-  .subtitle {
-    padding: 0;
-    text-align: center;
-    font-size: 28px;
-  }
-  .card-wrapper {
+  .skill-list {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .cards {
-    margin-top: 0px;
-    padding: 2px;
   }
 }
 </style>

@@ -2,12 +2,12 @@
   <div id="app">
     <v-app>
       <!-- v-show="loading" -->
-
       <div v-show="loading" class="loader" key="loader">
+        <!-- loadingページをコンポーネント化する -->
         <p class="loader-text">a few moments later</p>
         <semipolar-spinner
           :animation-duration="1000"
-          :size="100"
+          :size="80"
           color="#f5f5f5"
         />
       </div>
@@ -34,7 +34,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 3000);
+    }, 2000);
   },
   components: {
     BottomNav,
@@ -46,30 +46,55 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=Kaushan+Script&family=Kiwi+Maru:wght@300&family=Luckiest+Guy&family=M+PLUS+Rounded+1c:wght@300&display=swap");
 * {
+  color: #333;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   line-height: 2em;
   letter-spacing: 1.5px;
+  box-sizing: border-box;
   font-family: "TsukuARdGothic-Regular", "M PLUS Rounded 1c", "Kiwi Maru",
     "ヒラギノ丸ゴ ProN", "ヒラギノ角ゴシック", "Hiragino Sans",
     "Hiragino Maru Gothic ProN", "Osaka", YuGothic, "Yu Gothic", "Yu Gothic UI",
     "メイリオ", Meiryo, sans-serif;
 }
 
-h2 {
-  font-family: "Alfa Slab One", "Skia-Regular_Black";
-  color: #fff;
-  font-size: 90px;
-  margin-top: -20px;
-  margin-left: 20px;
-  margin-bottom: 30px;
-}
-.title-jpn {
-  margin-left: 10px;
-  font-size: 24px;
+body {
+  font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.v-application p {
+  margin: 0;
+}
+
+.section {
+  padding-bottom: 150px;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 1800px;
+  width: 95%;
+  margin: 0 auto;
+}
+.h2-title {
+  text-align: center;
+  font-family: "Alfa Slab One", "Skia-Regular_Black";
+  color: #fff;
+  font-size: 6rem;
+  margin-bottom: 30px;
+}
+
+.title-jpn {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ページ遷移アニメーション */
 .v-enter {
   transform: translate(100vw, 0);
   opacity: 0;
@@ -91,6 +116,8 @@ h2 {
 .v-leave-active {
   transition: all 0.5s 0s ease;
 }
+
+/* ローディングアニメーション */
 .loader {
   background-color: #9b8a82;
   display: flex;
@@ -103,22 +130,22 @@ h2 {
 
 .loader-text {
   color: #f5f5f5;
-  font-size: 60px;
+  font-size: 3rem;
   font-family: "Caveat", "Kaushan Script", "Skia-Regular_Black";
   letter-spacing: 8px;
 }
 
 @media screen and (max-width: 800px) {
-  h2 {
-    text-align: center;
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-left: 0;
+  .wrapper {
+    width: 90%;
+  }
+
+  .h2-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
   .title-jpn {
-    margin-left: 10px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .loader {
     padding-bottom: 100px;
@@ -129,7 +156,6 @@ h2 {
     width: 100%;
     height: 100%;
   }
-
   .loader-text {
     font-size: 38px;
     letter-spacing: 2px;

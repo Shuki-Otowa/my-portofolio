@@ -59,19 +59,20 @@ export default {
 }
 
 .v-btn--active {
-  background-color: #939597 !important;
-  color: #f5f5f5 !important;
+  background-color: #ccc !important;
+  color: #333 !important;
 }
-
+.v-btn:not(.v-btn--round) {
+  padding: 0 !important;
+}
 
 @media screen and (max-width: 1024px) {
-.v-bottom-navigation {
-  justify-content: space-evenly !important;
-}
-.v-btn {
-  width: 100% !important;
-}
-
+  .v-bottom-navigation {
+    justify-content: space-evenly !important;
+  }
+  .v-btn {
+    width: 100% !important;
+  }
 }
 </style> 
 

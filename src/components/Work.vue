@@ -1,55 +1,19 @@
 <template>
-  <div id="work">
-    <div class="container">
-      <h2>Work<span class="title-jpn">製作物</span></h2>
+  <div class="work-section section">
+    <div class="wrapper">
+      <h2 class="h2-title">Work<span class="title-jpn">製作物</span></h2>
+      <p class="lead-text">
+        各種スキルの習得のためのアウトプットとして制作したアプリです。
+      </p>
       <div class="work-items">
-        <div class="work-item">
-          <img src="../assets/Profile.jpg" alt="" class="work-img" />
-          <h3 class="subtitle">製作物の名前</h3>
-          <p class="work-comment">
-            ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
-          </p>
-          <h3 class="subtitle">使用したスキル</h3>
-          <div class="useSkill" v-for="skill1 in skills1" :key="skill1">
-            {{ skill1 }}
-          </div>
-          <h3 class="subtitle">製作物へのリンク</h3>
-          <div class="icons-link">
-            <a href="" class="link"><p>GitHub</p></a>
-          </div>
-        </div>
-
-        <div class="work-item">
-          <img src="../assets/Skill.jpg" alt="" class="work-img" />
-          <h3 class="subtitle">製作物の名前</h3>
-          <p class="work-comment">
-            ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
-          </p>
-          <h3 class="subtitle">使用したスキル</h3>
-          <div class="useSkill" v-for="skill2 in skills2" :key="skill2">
-            {{ skill2 }}
-          </div>
-          <h3 class="subtitle">製作物へのリンク</h3>
-          <div class="icons-link">
-            <a href="" class="link"><p>GitHub</p></a>
-            <a href="" class="link"><p>Webサイト</p></a>
-          </div>
-        </div>
-
-        <div class="work-item">
-          <img src="../assets/Contact.jpg" alt="" class="work-img" />
-          <h3 class="subtitle">製作物の名前</h3>
-          <p class="work-comment">
-            ここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れるここに製作物の説明を入れる
-          </p>
-          <h3 class="subtitle">使用したスキル</h3>
-          <div class="useSkill" v-for="skill3 in skills3" :key="skill3">
-            {{ skill3 }}
-          </div>
-          <h3 class="subtitle">製作物へのリンク</h3>
-          <div class="icons-link">
-            <a href="" class="link"><p>GitHub</p></a>
-            <a href="" class="link"><p>Webサイト</p></a>
+        <div v-for="item in items" :key="item.title">
+          <img :src="item.img_src" class="work-img" alt="work image" />
+          <modal :val="postItem" v-show="showContent" @close="closeModal" />
+          <h3 class="work-title">{{ item.title }}</h3>
+          <div class="button">
+            <button class="more-button" @click="openModal(item)">
+              詳しく見る
+            </button>
           </div>
         </div>
       </div>
@@ -57,123 +21,148 @@
   </div>
 </template>
 
-
 <script>
+import Modal from "./Modal.vue";
 export default {
+  components: {
+    Modal,
+  },
   data() {
     return {
-      dialog: false,
-      skills1: [
-        "#HTML",
-        "#CSS",
-        "#Vue.js",
-        "#Vuetify",
-        "#axios",
-        "#Firebase",
-        "#Netlify",
+      showContent: false,
+      postItem: "",
+      items: [
+        {
+          id: 1,
+          title: "TODOリスト",
+          summary: "実案件で作成したコーポレートサイトです。",
+          skill: "HTML,CSS(Sass)",
+          github: " ",
+          website: "#",
+          img_src: require("../assets/Profile.jpg"),
+        },
+        {
+          title: "タイピングゲーム",
+          id: 2,
+          summary: "コーディングや、各種コマンドを覚えることもかねてこのタイピングゲームを構築しました。",
+          skill: "HTML,CSS(Sass),Vue.js",
+          website: "",
+          img_src: require("../assets/Home.jpg"),
+        },
+        {
+          title: "ポートフォリオサイト",
+          summary:
+            "Vue.jsを学んだアウトプットとしてSPAで自身のポートフォリオサイトを構築しました。見た目はVuetify,HTML,CSSを使用して整えています。お問い合せいただいた内容はFirebaseを使用してデータを収集しています。",
+          id: 3,
+          skill:
+            "HTML, CSS(Sass), Vue.js, Vuetify, Netlify, Firebase, npm, git",
+          github:
+            "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
+          website:
+            "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
+          img_src: require("../assets/Work.jpg"),
+        },
       ],
-      skills2: ["#HTML", "#CSS", "#Vue.js", "#Firebase"],
-      skills3: ["#HTML", "#SCSS", "#Vue.js", "#Firebase", "#bootstrap"],
     };
+  },
+  methods: {
+    openModal(item) {
+      this.showContent = true;
+      this.postItem = item;
+    },
+    closeModal() {
+      this.showContent = false;
+    },
   },
 };
 </script>
 
-<style scoped>
-a {
-  text-decoration: none;
-}
-#work {
-  background-color: #dcd1ae;
-  min-height: 100%;
-  padding-bottom: 150px;
-}
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
-}
 
+<style scoped>
+.work-section {
+  background-color: #dcd1ae;
+}
+.lead-text {
+  margin-bottom: 30px;
+}
 .work-items {
-  width: 95%;
-  max-width: 1280px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 70px;
 }
-
-.work-item {
+.work-title {
   text-align: center;
-  background-color: #fff;
-  border-radius: 30px;
-  height: fit-content;
-  padding-bottom: 30px;
 }
 
 .work-img {
+  cursor: pointer;
   width: 100%;
-  height: 20%;
+  height: auto;
   object-fit: cover;
-  border-radius: 30px 30px 0 0;
-}
-
-.work-comment {
-  padding: 0 20px;
-  text-align: left;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 20px;
-  padding: 20px 0;
-}
-
-.useSkill {
-  display: inline-block;
-  background-color: #dcd1ae;
-  margin: 10px 6px;
-  padding: 0 12px;
-  border-radius: 8px;
-}
-
-.icons-link {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.link {
-  display: inline-block;
-  width: 40%;
-  background-color: #dcd1ae;
   border-radius: 10px;
-  padding: 8px 0;
-  color: #000;
 }
 
-.v-application p {
-  margin-bottom: 0;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-weight: 600;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 2px solid #333;
+  position: relative;
+  transition: 0.4s;
 }
-.link:hover {
-  opacity: 0.8;
-  transition: all 0.6s ease;
+.button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  border-radius: 6px;
+  transform-origin: 0%;
+  transform: scaleX(0);
+  transition: transform ease 0.4s;
 }
 
-@media screen and (max-width: 1024px) {
+.button:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.more-button {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-button::after {
+  content: ">>";
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+
+.more-button:hover {
+  color: #fff;
+  transition-delay: 0.1s;
+}
+
+@media screen and (max-width: 800px) {
   .work-items {
-    width: 98%;
     grid-template-columns: repeat(1, 1fr);
   }
-  .icons-link {
-    flex-direction: column;
-
-}
-  .link {
-    border-radius: 10px;
-
-  width: 90%;
-  padding: 10px 0;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
 }
 </style>

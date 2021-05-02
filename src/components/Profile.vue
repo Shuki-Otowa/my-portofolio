@@ -1,50 +1,42 @@
 <template>
-  <div id="profile">
-    <div class="container">
-    <h2>Profile<span class="title-jpn">自己紹介</span></h2>
-    <div class="profile-container">
-      <div class="profile-img">
-        <img src="../assets/me.jpeg" alt="" class="me" />
-      </div>
-      <div class="profile-text">
-        <div class="name">名前：Shuki Otowa</div>
-        <div class="from">出身：宮城県</div>
-        <div class="hobby">趣味：サーフィン</div>
-        <div class="why">
-          なぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているかなぜエンジニアを目指しているか
+  <div class="profile-section section">
+    <div class="wrapper">
+      <h2 class="h2-title">Profile<span class="title-jpn">自己紹介</span></h2>
+      <div class="profile-wrapper">
+        <div class="profile-img">
+          <img src="../assets/me.jpeg" alt="" class="my-img" />
+        </div>
+        <div class="profile-text">
+          <p>名 前：Shuki Otowa</p>
+          <p>出 身：宮城県</p>
+          <p>趣 味：サーフィン,スニーカー,古着,海外旅行(コロナ前)</p>
+          <p>興 味：</p>
+          <div class="summary">
+            <p>
+              大学卒業後から現在まで営業職(SIer/某水族館)として７年間勤務しています。
+              <br />プログラミング学習は、最初は何も分からない状況でした。
+              しかし、繰り返し学習することで知識が蓄積して、さらに新しい事に挑戦できるのがとても楽しく、気が付いたらもっと学習したいと思うようになっていました。
+              <br />フロントエンドエンジニアへの転職を目指し、独学でプログラミングとWebデザインの勉強を始める。
+              <br />保守性に優れたコーディングを行い、モダンなフロントエンド開発ができるエンジニアを目指し日々勉強中です。
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
     </div>
   </div>
 </template>
 
 <style scoped>
-#profile {
+.profile-section {
   background-color: #90c1cc;
-  min-height: 100vh;
-  padding-bottom: 150px;
+  padding-bottom: 0;
 }
-.container{
-  max-width: 1800px;
-  margin: 0 auto;
-}
-h2 {
-  letter-spacing: 6px;
-}
-.profile-container {
+
+.profile-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* width: 90%; */
-  max-width: 1280px;
+  width: 90%;
   margin: 0 auto;
-}
-
-.profile-img {
-      text-align: center;
-
 }
 
 .profile-text {
@@ -52,10 +44,10 @@ h2 {
   margin: 0 auto;
   padding: 20px 0;
 }
-.why {
+.summary {
   margin-top: 24px;
 }
-.me {
+.my-img {
   max-width: 500px;
   width: 80%;
   margin-top: 40px;
@@ -63,18 +55,23 @@ h2 {
 }
 
 @media screen and (max-width: 1100px) {
-  .profile-container {
+  .profile-section {
+    padding-bottom: 150px;
+  }
+  .profile-wrapper {
     flex-direction: column;
+    width: 100%;
   }
 
   .profile-text {
-    margin-top: 24px;
-    width: 90%;
+    width: 95%;
+  }
+  .profile-img {
+    width: 100%;
+    text-align: center;
   }
 
-  .me {
-    width: 90%;
-    height: 90%;
+  .my-img {
   }
 }
 </style>
