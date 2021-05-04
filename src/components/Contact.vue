@@ -1,8 +1,12 @@
 <template>
   <div class="cantact-section section">
     <div class="wrapper">
-      <h2 class="h2-title">Contact<span class="title-jpn">お問合せ</span></h2>
-      <p>ご質問、ご感想、お仕事のご相談等、お気軽にお問い合わせください。</p>
+      <h2 class="section-title">
+        Contact<span class="title-jpn">お問合せ</span>
+      </h2>
+      <p class="lead-text">
+        ご質問、ご感想、お仕事のご相談等、お気軽にお問い合わせください。
+      </p>
       <v-container class="form-wrapper">
         <v-form ref="form" v-if="showForm">
           <v-card-title class="form-title">お名前</v-card-title>
@@ -107,32 +111,34 @@ export default {
   background-color: #e6a5ab;
 }
 
+.lead-text {
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
 .form-wrapper {
-  max-width: 1280px;
-  padding: 30px 80px 50px;
-  width: 90%;
+  /* max-width: 1280px; */
+  padding: 20px 40px 40px;
+  width: 65%;
   border-radius: 30px;
   background-color: #fff;
 }
 
 .form-title {
   padding: 0;
-  margin-top: 40px;
-  font-size: 24px;
+  margin-top: 20px;
 }
 
 .form-title::before {
   margin-right: 6px;
   padding: 0px 10px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #f5f5f5;
   background-color: #c44;
   content: "必 須";
-}
-
-.form-text {
-  font-size: 20px;
 }
 
 .form-success {
@@ -147,28 +153,26 @@ export default {
 }
 
 button {
-  font-size: 24px !important;
-  margin-top: 60px;
+  /* height: 60px !important; */
+  font-size: 1.3rem !important;
+  margin-top: 30px;
   border-radius: 20px;
   background-color: #c44 !important;
   color: #fff !important;
   font-weight: bold;
 }
-.v-messages__message {
-  color: red !important;
-  font-size: 19px !important;
-  padding: 10px 0 !important;
-}
+
 @media screen and (max-width: 800px) {
   .wrapper {
-    padding-bottom: 60px;
+    padding-bottom: 0px;
+  }
+  .lead-text {
+    font-size: 1rem;
+    width: 95%;
   }
   .form-wrapper {
     padding: 20px;
-  }
-  .form-title {
-    font-size: 1.3rem;
-    margin-top: 15px;
+    width: 100%;
   }
 
   .form-title::before {
@@ -176,11 +180,7 @@ button {
     font-size: 0.8rem;
   }
 
-  .form-text {
-    font-size: 1rem;
-  }
   .form-success {
-    font-size: 1rem;
     margin-top: 20px;
   }
   .form-success img {

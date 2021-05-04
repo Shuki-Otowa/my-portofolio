@@ -1,7 +1,7 @@
 <template>
   <div class="work-section section">
     <div class="wrapper">
-      <h2 class="h2-title">Work<span class="title-jpn">製作物</span></h2>
+      <h2 class="section-title">Work<span class="title-jpn">製作物</span></h2>
       <p class="lead-text">
         各種スキルの習得のためのアウトプットとして制作したアプリです。
       </p>
@@ -83,7 +83,10 @@ export default {
   background-color: #dcd1ae;
 }
 .lead-text {
+  /* width: 80%; */
+  margin: 0 auto;
   margin-bottom: 30px;
+  font-size: 1.2rem;
 }
 .work-items {
   display: grid;
@@ -95,18 +98,13 @@ export default {
 }
 
 .work-img {
-  cursor: pointer;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  /* height: auto;
+  object-fit: cover; */
   border-radius: 10px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
   width: 100%;
   height: 60px;
   text-align: center;
@@ -151,7 +149,7 @@ export default {
 
 .more-button::after {
   content: ">>";
-  padding-left: 5px;
+  padding-left: 6px;
   padding-bottom: 2px;
 }
 

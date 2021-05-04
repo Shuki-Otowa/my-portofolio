@@ -42,7 +42,7 @@ export default {
 <style scoped>
 .modal-title {
   text-align: center;
-  margin: 5px 0;
+  margin: 20px 0 0;
 }
 .v-application a {
   color: #333;

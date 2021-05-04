@@ -76,11 +76,11 @@ a {
 }
 
 .wrapper {
-  max-width: 1800px;
+  max-width: 1280px;
   width: 95%;
   margin: 0 auto;
 }
-.h2-title {
+.section-title {
   text-align: center;
   font-family: "Alfa Slab One", "Skia-Regular_Black";
   color: #fff;
@@ -140,7 +140,7 @@ a {
     width: 90%;
   }
 
-  .h2-title {
+  .section-title {
     font-size: 3rem;
     margin-bottom: 20px;
   }

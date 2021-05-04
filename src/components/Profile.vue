@@ -1,7 +1,7 @@
 <template>
   <div class="profile-section section">
     <div class="wrapper">
-      <h2 class="h2-title">Profile<span class="title-jpn">自己紹介</span></h2>
+      <h2 class="section-title">Profile<span class="title-jpn">自己紹介</span></h2>
       <div class="profile-wrapper">
         <div class="profile-img">
           <img src="../assets/me.jpeg" alt="" class="my-img" />

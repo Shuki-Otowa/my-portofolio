@@ -1,11 +1,11 @@
 <template>
   <div class="section-skill section">
     <div class="wrapper">
-      <h2 class="h2-title">Skill<span class="title-jpn">保有スキル</span></h2>
-      <p>Progateや、Udemyを使用してフォク額</p>
+      <h2 class="section-title">Skill<span class="title-jpn">保有スキル</span></h2>
+      <p class="lead-text">
+        Progateや、ドットインストール、Udemyを使用して独学しています。また、QiitaやZennnなどの技術ブログも参考にしています。
+      </p>
       <div class="skill-wrapper">
-        <h3 class="lead-text">My Skills</h3>
-        <hr />
         <div class="skill-list">
           <div
             class="skill-item"
@@ -64,8 +64,7 @@ export default {
         {
           title: "jQuery",
           icon: "devicon-jquery-plain",
-          summary:
-            "Webサイトに動きをつけるためスライダー、モーダル、",
+          summary: "Webサイトに動きをつけるためスライダー、モーダル、",
         },
         {
           title: "Vue.js",
@@ -101,24 +100,27 @@ export default {
 .section-skill {
   background-color: #91ab9c;
 }
-.wrapper {
-  text-align: center;
-}
 
+.lead-text {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
 .skill-wrapper {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
   background-color: #fff;
   border-radius: 30px;
-  padding: 30px 0;
+  padding: 0px 0 60px;
 }
 .skill-title {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  margin-top: 40px;
+  margin-top: 60px;
 }
+
 .skill-name {
   margin-right: 8px;
 }
@@ -129,31 +131,21 @@ export default {
   grid-template-columns: repeat(2, 1fr);
 }
 
-hr {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.lead-text {
-  font-size: 1.8rem;
-  padding: 0 60px 20px 60px;
-}
-
 .skill-item {
-  padding: 0 20px;
-}
-
-.skill-summary {
-  margin-top: 10px;
-  text-align: left;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 800px) {
-  hr {
-    width: 85%;
-  }
+  .skill-title {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
   .skill-list {
     grid-template-columns: repeat(1, 1fr);
   }
+
+.skill-item {
+  padding: 0 15px;
+}
 }
 </style>
