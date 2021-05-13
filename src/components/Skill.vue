@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h2 class="section-title">Skill<span class="title-jpn">保有スキル</span></h2>
       <p class="lead-text">
-        Progateや、ドットインストール、Udemyを使用して独学しています。また、QiitaやZennnなどの技術ブログも参考にしています。
+        Progateや、ドットインストール、Udemyを使用して独学しています。また、QiitaやZennnなどの技術ブログも参考にして、自身で情報収集をしながら学習しています。
       </p>
       <div class="skill-wrapper">
         <div class="skill-list">
@@ -34,49 +34,43 @@ export default {
           title: "HTML",
           icon: "devicon-html5-plain",
           summary:
-            "レスポンシブサイトのコーディング。正しい文法で、UXが高く、コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。",
+            "レスポンシブサイトのコーディングはもちろん、デザインデータに忠実なコーディングを意識しています。また、保守性の高いコーディングを心がけています。",
         },
         {
           title: "CSS",
           icon: "devicon-css3-plain",
           summary:
-            "レスポンシブサイトのコーディング。正しい文法で、UXが高く、コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。",
+            "予測しやすい、再利用しやすい、メンテナンスしやすいCSS設計を心がけています。",
         },
         {
           title: "SCSS",
           icon: "devicon-sass-plain",
 
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
-        },
-        {
-          title: "bootstrap",
-          icon: "devicon-bootstrap-plain",
-          summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "mixinやファイルの分割管理などを活用し、効率的でメンテナンス性が高いコード設計が可能です。ネストの使いすぎなど見通しが悪くならないように気をつけながら実装しています。",
         },
         {
           title: "JavaScript",
           icon: "devicon-javascript-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "基礎的な文法を学習し、",
         },
         {
           title: "jQuery",
           icon: "devicon-jquery-plain",
-          summary: "Webサイトに動きをつけるためスライダー、モーダル、",
+          summary: "スライダー、モーダル、スムーススクロールなど、Webサイトに動きをつけるためのアニメーション実装が可能です。",
         },
         {
           title: "Vue.js",
           icon: "devicon-vuejs-plain",
           summary:
-            "基本的な知識、各種ディレクティブやVueRouter,Vuetify,Vuexなどを学習し、本サイトもVue.jsで開発しています。",
+            "単一ファイルコンポーネントを利用してSPAの開発ができます。VueRouter,Vuetifyなどを利用し、本サイトもVue.jsで開発しています。",
         },
         {
           title: "Firebase",
           icon: "devicon-firebase-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "本サイトのお問い合わせフォームのデータベースとしてCloud Firestoreを利用してデータの収集を行っています。",
         },
         {
           title: "npm",
@@ -88,7 +82,7 @@ export default {
           title: "Git",
           icon: "devicon-git-plain",
           summary:
-            "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
+            "Gitの基礎を学習し、定期的なコミットや、新たな機能を実装する際にはブランチを切り替えて開発を行うなど、個人開発においてもバージョン管理を意識しております。",
         },
       ],
     };
