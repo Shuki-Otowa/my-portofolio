@@ -7,7 +7,7 @@
         <p class="loader-text">a few moments later</p>
         <semipolar-spinner
           :animation-duration="1000"
-          :size="80"
+          :size="60"
           color="#f5f5f5"
         />
       </div>
@@ -34,7 +34,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 2000);
+    }, 100); // 値は3000に戻す
   },
   components: {
     BottomNav,
@@ -97,29 +97,21 @@ a {
 /* ページ遷移アニメーション */
 .v-enter {
   transform: translate(100vw, 0);
-  opacity: 0;
-}
-.v-enter-to {
-  opacity: 1;
 }
 .v-enter-active {
-  transition: all 0.5s 0.5s ease;
-}
-.v-leave {
-  transform: translate(0, 0);
-  opacity: 1;
+  transition: all 0.6s 0.6s ease;
 }
 .v-leave-to {
   transform: translate(-100vw, 0);
-  opacity: 0;
 }
 .v-leave-active {
-  transition: all 0.5s 0s ease;
+  transition: all 0.6s 0s ease;
 }
 
 /* ローディングアニメーション */
 .loader {
-  background-color: #9b8a82;
+  /* background-color: #9b8a82; */
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;

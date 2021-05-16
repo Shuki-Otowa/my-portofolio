@@ -1,5 +1,5 @@
 <template>
-  <div class="cantact-section section">
+  <div class="section-cantact section">
     <div class="wrapper">
       <h2 class="section-title">
         Contact<span class="title-jpn">お問合せ</span>
@@ -107,7 +107,7 @@ export default {
 
 
 <style scoped>
-.cantact-section {
+.section-cantact {
   background-color: #e6a5ab;
 }
 
@@ -153,16 +153,16 @@ export default {
 }
 
 button {
-  /* height: 60px !important; */
+  height: 60px !important;
   font-size: 1.3rem !important;
   margin-top: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #c44 !important;
   color: #fff !important;
   font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: px) {
   .wrapper {
     padding-bottom: 0px;
   }

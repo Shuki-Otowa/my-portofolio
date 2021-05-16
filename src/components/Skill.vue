@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h2 class="section-title">Skill<span class="title-jpn">保有スキル</span></h2>
       <p class="lead-text">
-        Progateや、ドットインストール、Udemyを使用して独学しています。また、QiitaやZennnなどの技術ブログも参考にして、自身で情報収集をしながら学習しています。
+        これからも既存スキルの更なるレベルアップと新技術の習得のために日々勉強を継続していきます。
       </p>
       <div class="skill-wrapper">
         <div class="skill-list">
@@ -53,7 +53,7 @@ export default {
           title: "JavaScript",
           icon: "devicon-javascript-plain",
           summary:
-            "基礎的な文法を学習し、",
+            "Vue.jsを扱うために基礎的なことを学習しました。 ",
         },
         {
           title: "jQuery",
@@ -64,20 +64,20 @@ export default {
           title: "Vue.js",
           icon: "devicon-vuejs-plain",
           summary:
-            "単一ファイルコンポーネントを利用してSPAの開発ができます。VueRouter,Vuetifyなどを利用し、本サイトもVue.jsで開発しています。",
+            "基本的なVue.jsの構文や、利用方法を学習しており、単一ファイルコンポーネントを利用してSPAの開発ができます。本サイトもVue.jsで開発しています。",
         },
         {
           title: "Firebase",
           icon: "devicon-firebase-plain",
           summary:
-            "本サイトのお問い合わせフォームのデータベースとしてCloud Firestoreを利用してデータの収集を行っています。",
-        },
-        {
-          title: "npm",
-          icon: "devicon-npm-original-wordmark",
-          summary:
             "どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明どのレベルかを簡単に説明",
         },
+        // {
+        //   title: "npm",
+        //   icon: "devicon-npm-original-wordmark",
+        //   summary:
+        //     "Vue.jsを用いた開発の際に関連する",
+        // },
         {
           title: "Git",
           icon: "devicon-git-plain",
@@ -129,7 +129,7 @@ export default {
   padding: 0 40px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 599px) {
   .skill-title {
   font-size: 1.5rem;
   margin-top: 30px;

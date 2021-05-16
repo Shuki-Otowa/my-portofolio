@@ -1,18 +1,10 @@
 <template>
   <div class="section-home section">
-    <div class="for-vuetyper">
-      <vue-typer
-        :text="['Thank you for visiting\nmy portfolio.']"
-        :repeat="0"
-        :preTypeDelay="2500"
-        :typeDelay="100"
-      ></vue-typer>
-    </div>
-    <div class="lead-text fade-in">
-      <p>
-        ポートフォリオサイトをご覧いただきありがとうございます。フロントエンドエンジニアへの転職を目財しているShukiと申します。
-        このサイトではこれまでに作成した制作物、身につけたスキルをまとめています。
-      </p>
+    <div class="mask">
+      <div class="lead-text fade-in">
+          ポートフォリオサイトをご覧いただきありがとうございます。本サイトはフロントエンドエンジニアを目指し、これまでに作成した制作物、身につけたスキルをまとめています。
+          <br>私のことをもっと深く知っていただくきっかけになればと思います。
+      </div>
     </div>
   </div>
 </template>
@@ -23,40 +15,24 @@
 .section-home {
   background-image: url("..//assets/Home.jpg");
   background-size: cover;
-  padding-bottom: 0;
+}
+.mask {
+  background-color: rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  margin-bottom: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lead-text {
+  padding-bottom: 150px;
   margin: 0 auto;
   width: 80%;
   font-size: 1.5rem;
+  color: #fff;
 }
 
-.for-vuetyper {
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-}
-.vue-typer {
-  font-family: 'Copperplate Gothic Light', fantasy !important;
-  font-size: 3.5rem;
-}
-/*フェードイン表示の指定*/
-.fade-in {
-  opacity: 0;
-  animation: fade-in 6s ease forwards;
-}
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-  }
-}
-
-/*以下遅延の指定*/
-.lead-text {
-  animation-delay: 3.5s;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .lead-text {
     width: 90%;
     font-size: 1.2rem;

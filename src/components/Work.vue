@@ -1,13 +1,13 @@
 <template>
-  <div class="work-section section">
+  <div class="section-work section">
     <div class="wrapper">
       <h2 class="section-title">Work<span class="title-jpn">製作物</span></h2>
       <p class="lead-text">
-        各種スキルの習得のためのアウトプットとして制作したアプリです。
+        各種スキルの習得のためのアウトプットとして制作したアプリケーションの一部です。
       </p>
       <div class="work-items">
         <div v-for="item in items" :key="item.title">
-          <img :src="item.img_src" class="work-img" alt="work image" />
+          <img :src="item.img" class="work-img" alt="work image" />
           <modal :val="postItem" v-show="showContent" @close="closeModal" />
           <h3 class="work-title">{{ item.title }}</h3>
           <div class="button">
@@ -33,34 +33,43 @@ export default {
       postItem: "",
       items: [
         {
-          id: 1,
-          title: "TODOリスト",
-          summary: "実案件で作成したコーポレートサイトです。",
-          skill: "HTML,CSS(Sass)",
-          github: " ",
+          title: "タスク管理アプリ",
+          summary:
+            "Vue.jsやVuexを使ってタスク管理アプリを作成しました。リストや、タスクカードの作成・削除、ドラッグ&ドロップ機能(Draggable)を実装しました。レスポンシブデザイン対応も行っています。",
+          difficulty:
+            "Vuexについて理解するのに苦労しました。まだまだ理解できていない部分も多いですが、これからも学習を続けてより効率よく、大規模アプリケーション構築にも対応できるようになりたいと考えています。",
+          skill:
+            "HTML, CSS, Javascript, Vue.js, Vuex, Draggable, npm, Git, Github",
+          github:
+            "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
           website: "#",
-          img_src: require("../assets/Profile.jpg"),
+          img: require("../assets/Profile.jpg"),
         },
         {
           title: "タイピングゲーム",
-          id: 2,
-          summary: "コーディングや、各種コマンドを覚えることもかねてこのタイピングゲームを構築しました。",
-          skill: "HTML,CSS(Sass),Vue.js",
+          summary:
+            "タイピングの練習と共にコーディングや、各種コマンドを覚えることもかねて、このタイピングゲームを構築しました。現在は最低限の機能での実装になっているので、今後は問題の登録機能や、得点・ランキング機能などの改良を重ねていきたいです。",
+          difficulty:
+            "タイマーの実装自体や、ゲームの開始、終了のフラグ設定など、Qiitaなどで情報収集しながらなんとか実装できました。",
+          skill: "HTML, CSS, Javascript, Vue.js, Vue-Router, npm, Git, Github",
+          github:
+            "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
           website: "",
-          img_src: require("../assets/Home.jpg"),
+          img: require("../assets/Home.jpg"),
         },
         {
           title: "ポートフォリオサイト",
           summary:
-            "Vue.jsを学んだアウトプットとしてSPAで自身のポートフォリオサイトを構築しました。見た目はVuetify,HTML,CSSを使用して整えています。お問い合せいただいた内容はFirebaseを使用してデータを収集しています。",
-          id: 3,
+            "Vue.jsを学んだアウトプットとしてSPAで自身のポートフォリオサイトを構築しようと思い、作成しました。UIを考慮して各ページへのリンクはハンバーガーメニューではなく、ボトムナビゲーションで実装しました。お問い合せいただいた内容についてはaxiosを使用してFirebaseのCloud Firestoreでデータを収集・管理しています。レスポンシブデザイン対応も行っています。",
+          difficulty:
+            "Vue.jsの勉強もかねてSPAでサイトを構築しようと思い、UdemyやQiitaなどで学習しながら作成したので、完成までにとにかく時間がかかりました(２ヶ月程度)。もっと簡潔に、保守もやすいコーディングができるように今後も学習を続けて改良していきたいと思っています。",
           skill:
-            "HTML, CSS(Sass), Vue.js, Vuetify, Netlify, Firebase, npm, git",
+            "HTML, CSS, Javascript, Vue.js, Vue-Router, Vuetify, Netlify, Firebase, npm, Git, Github",
           github:
             "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
           website:
             "https://github.com/Shuki-Otowa/my-portofolio/blob/feature/src/components/Work.vue",
-          img_src: require("../assets/Work.jpg"),
+          img: require("../assets/Work.jpg"),
         },
       ],
     };
@@ -79,7 +88,7 @@ export default {
 
 
 <style scoped>
-.work-section {
+.section-work {
   background-color: #dcd1ae;
 }
 .lead-text {
@@ -158,9 +167,19 @@ export default {
   transition-delay: 0.1s;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 80%;
+  }
   .work-items {
     grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .wrapper {
+    width: 95%;
   }
 }
 </style>

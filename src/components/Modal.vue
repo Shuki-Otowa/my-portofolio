@@ -5,20 +5,23 @@
         <v-icon @click="$emit('close')" class="icon-close" large
           >mdi-close-thick</v-icon
         >
-        <img :src="val.img_src" class="modal-img" />
+        <img :src="val.img" class="modal-img" />
         <h3 class="modal-title">{{ val.title }}</h3>
+        <h4 class="modal-subtitle">アプリケーション概要</h4>
         <p>{{ val.summary }}</p>
-        <h3 class="modal-title">使用したスキル</h3>
+        <h4 class="modal-subtitle">苦労したこと</h4>
+        <p>{{ val.difficulty }}</p>    
+        <h4 class="modal-subtitle">使用したスキル</h4>
         <p>{{ val.skill }}</p>
         <div class="button-link">
           <div class="button hover">
-            <a v-if="val.github" :href="val.github">GitHub</a>
+            <a v-if="val.github" :href="val.github">Github</a>
           </div>
           <div class="button hover">
             <a :href="val.website">Webサイト</a>
           </div>
         </div>
-        <div>
+        <div class="button-close-wrapper">
           <button @click="$emit('close')" class="button-close">閉じる</button>
         </div>
       </div>
@@ -41,8 +44,13 @@ export default {
 
 <style scoped>
 .modal-title {
+  font-size: 1.6rem;
   text-align: center;
-  margin: 20px 0 0;
+}
+.modal-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 30px 0 0;
 }
 .v-application a {
   color: #333;
@@ -86,6 +94,7 @@ export default {
   overflow-x: hidden;
   -ms-overflow-style: none; /* スクロールバーを非表示 IE, Edge 対応 */
   scrollbar-width: none; /* スクロールバーを非表示 Firefox 対応 */
+  
 }
 
 .modal::-webkit-scrollbar {
@@ -143,16 +152,23 @@ export default {
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
+.button-close-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
 
 .button-close {
-  padding-bottom: 40px;
-  width: 100%;
+  width: 20%;
   font-weight: 600;
-  color: #555;
+  color: #333;
   transition: 0.4s;
+  border: 2px solid #333;
+  border-radius: 5px;
 }
 .button-close:hover {
-  color: #000;
+  color: #fff;
+  background-color: #333;
   transition: 0.4s;
 }
 
@@ -167,7 +183,7 @@ export default {
   transform: rotateZ(180deg);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .modal {
     height: 90%;
     width: 90%;
